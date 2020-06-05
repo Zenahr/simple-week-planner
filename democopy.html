@@ -23,7 +23,9 @@
             min-height: 75vh;
         }
         
-        .grid-stack-item {}
+        .grid-stack-item {
+            border: 2px solid red;
+        }
         
         h1 {
             text-align: center;
@@ -33,11 +35,11 @@
         }
         
         .card {
-            background: none;
+            background: red;
         }
         
         section {
-            padding: 0 15px 0 15px;
+            padding: 0 40px 0 15px;
         }
         
         .grid-stack-item-removing {
@@ -64,6 +66,14 @@
             -ms-user-select: none;
             user-select: none;
             cursor: default;
+            min-height: 125px;
+            width: 120px
+        }
+        
+        .task-info {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
         }
     </style>
 </head>
@@ -81,9 +91,9 @@
         <div class="row">
             <div class="col-md-2 d-none d-md-block" style="border-right: 1px transparent white;">
 
-                <div class="text-center card text-white newWidget grid-stack-item ui-draggable ui-draggable-handle">
+                <div class="text-center card text-white newWidget grid-stack-item ui-draggable ui-draggable-handle" style="">
                     <div class="card-body grid-stack-item-content">
-                        <div class="task-info">
+                        <div class="task-info mx-auto text-center">
                             <h3>Task Info</h3>
                         </div>
                     </div>
@@ -99,7 +109,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-10" style="padding-bottom: 25px;">
-                <div class="row text-white weekdays" style="padding-left: 80px">
+                <div class="row text-white text-center weekdays">
                     <div class="col">
                         <p>Monday</p>
                     </div>
@@ -162,7 +172,14 @@
             },
             removable: '#trash',
             removeTimeout: 100,
-            acceptWidgets: '.newWidget'
+            acceptWidgets: '.newWidget',
+            column: 12,
+            columnWidth: '20px',
+            float: true,
+            verticalMargin: 0,
+            horizontalMargin: 0
+
+
         }, '#advanced-grid');
 
         $('.newWidget').draggable({
@@ -170,6 +187,8 @@
             scroll: false,
             appendTo: 'body',
             helper: 'clone',
+            width: 2,
+            height: 4
         });
         hljs.initHighlightingOnLoad();
     </script>
