@@ -19,6 +19,10 @@
     <link href="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
     <style type="text/css">
+        .grid-stack {
+            min-height: 75vh;
+        }
+        
         .grid-stack-item {}
         
         h1 {
@@ -38,18 +42,7 @@
         
         .grid-stack-item-removing {
             opacity: 0.8;
-            filter: blur(5px);
-        }
-        
-        @media all and (max-width: 575px) {
-            #hero {
-                margin-top: 32px;
-            }
-        }
-        
-        .logo {
-            display: inline;
-            margin-right: 15px;
+            filter: blur(2px);
         }
         
         #trash {
@@ -100,6 +93,29 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-10" style="padding-bottom: 25px;">
+                <div class="row" style="padding-left: 80px">
+                    <div class="col">
+                        <p>Monday</p>
+                    </div>
+                    <div class="col">
+                        <p>Tuesday</p>
+                    </div>
+                    <div class="col">
+                        <p>Wednesday</p>
+                    </div>
+                    <div class="col">
+                        <p>Thursday</p>
+                    </div>
+                    <div class="col">
+                        <p>Friday</p>
+                    </div>
+                    <div class="col">
+                        <p>Saturday</p>
+                    </div>
+                    <div class="col">
+                        <p>Sunday</p>
+                    </div>
+                </div>
                 <div style="padding: 15px; border: 1px solid white">
                     <style type="text/css" data-gs-style-id="gridstack-style-19958"></style>
                     <div class="grid-stack grid-stack-instance-305 grid-stack-animate ui-droppable" id="advanced-grid" data-gs-width="12" data-gs-animate="yes" data-gs-column="12" data-gs-current-row="6" style="height: 460px;">
