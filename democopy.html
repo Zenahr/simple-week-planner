@@ -19,9 +19,7 @@
     <link href="https://cdn.jsdelivr.net/npm/gridstack@1.1.1/dist/gridstack.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
     <style type="text/css">
-        .grid-stack-item {
-            border: 2px solid red;
-        }
+        .grid-stack-item {}
         
         h1 {
             text-align: center;
@@ -56,6 +54,13 @@
         
         #trash {
             background-color: #cc6857;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
         }
         
         .newWidget {
@@ -75,15 +80,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 d-none d-md-block" style="border-right: 1px dashed white;">
+            <div class="col-md-2 d-none d-md-block" style="border-right: 1px transparent white;">
 
                 <div class="text-center card text-white newWidget grid-stack-item ui-draggable ui-draggable-handle">
                     <div class="card-body grid-stack-item-content">
-                        <div>
-                            <ion-icon name="add-circle" style="font-size: 400%" role="img" class="md hydrated" aria-label="add circle"></ion-icon>
-                        </div>
-                        <div>
-                            <span>Drag me into the dashboard!</span>
+                        <div class="task-info">
+                            <h3>Task Info</h3>
                         </div>
                     </div>
                 </div>
@@ -140,20 +142,12 @@
             removeTimeout: 100,
             acceptWidgets: '.newWidget'
         }, '#advanced-grid');
+
         $('.newWidget').draggable({
             revert: 'invalid',
             scroll: false,
             appendTo: 'body',
-            helper: 'clone'
-        });
-        $('#search').on('submit', function(event) {
-            event.preventDefault();
-            var searchTerm = $('#searchTerm').val();
-            window.open(
-                'https://github.com/gridstack/gridstack.js/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+' +
-                searchTerm,
-                '_blank'
-            );
+            helper: 'clone',
         });
         hljs.initHighlightingOnLoad();
     </script>
