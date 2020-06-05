@@ -42,7 +42,6 @@
         
         .grid-stack-item-removing {
             opacity: 0.8;
-            filter: blur(2px);
         }
         
         #trash {
@@ -58,6 +57,13 @@
         
         .newWidget {
             background-color: #6cad84;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            cursor: default;
         }
     </style>
 </head>
@@ -93,7 +99,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-10" style="padding-bottom: 25px;">
-                <div class="row" style="padding-left: 80px">
+                <div class="row text-white weekdays" style="padding-left: 80px">
                     <div class="col">
                         <p>Monday</p>
                     </div>
